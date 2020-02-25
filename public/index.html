@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Socket.io Video-player</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="color">
+    <div><h1>Socket Video-player</h1></div>
+    <div id="player" style="pointer-events: none"></div>
+    <div class="controls">
+      <button id="plays">Play</button>
+      <button>Pause</button>
+      <input
+        id="slider"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        step="1"
+        oninput="changeTime(this)"
+      />
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="video-player.js"></script>
+  </body>
+</html>
